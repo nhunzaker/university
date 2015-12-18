@@ -17,6 +17,7 @@
   "scripts": {
     "lint": "standard lib/**/*.js",
     "test": "mocha -R dot --recursive",
+    "test:watch": "mocha -R min -w --recursive",
     "test:cov": "istanbul cover _mocha -- -R dot --recursive"
   },
   "repository": {
