@@ -6,12 +6,12 @@ describe('Server', function() {
   context('When Server.init is called at a given port', function() {
     var PORT = 9000
 
-    beforeEach(function (done) {
-      this.server = Server.init(PORT, done)
+    beforeEach(function (next) {
+      this.server = Server.init(PORT, next)
     })
 
-    afterEach(function (done) {
-      this.server.stop(done)
+    afterEach(function (next) {
+      this.server.stop(next)
     })
 
     it ('creates a server at a given port', function () {
