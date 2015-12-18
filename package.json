@@ -11,10 +11,13 @@
   },
   "devDependencies": {
     "istanbul": "0.4.1",
-    "mocha": "2.3.4"
+    "mocha": "2.3.4",
+    "standard": "5.4.1"
   },
   "scripts": {
-    "test": "istanbul cover _mocha -- -R dot"
+    "lint": "standard lib/**/*.js",
+    "test": "mocha -R dot --recursive",
+    "test:cov": "istanbul cover _mocha -- -R dot --recursive"
   },
   "repository": {
     "type": "git",
